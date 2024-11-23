@@ -7,7 +7,7 @@
 int s[6];
 int base [6] = {1, 2, 4, 8, 16, 32);
 int sensor;
-// Void Setup --------------------------------------  1:10:22
+// Void Setup -------------------------------------- Tech Topia LFR D7 1:10:22
 void setup() {
 pinMode(1mf, OUTPUT);
 pinMode(1mb, OUTPUT);
