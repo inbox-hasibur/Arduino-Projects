@@ -1,4 +1,4 @@
-#define Ims 5
+#define Ims 5 
 #define lmf 6
 #define lmb 7
 #define rmf 8
@@ -7,7 +7,7 @@
 int s[6];
 int base [6] = {1, 2, 4, 8, 16, 32);
 int sensor;
-
+// Void Setup --------------------------------------  1:10:22
 void setup() {
 pinMode(1mf, OUTPUT);
 pinMode(1mb, OUTPUT);
@@ -15,7 +15,7 @@ pinMode(rmf, OUTPUT);
 pinMode(rmb, OUTPUT);
 // motor(250, 250); //run all the motor forward at full speed
 }
-
+// Functions ----------------------------------------
 void motor (int a, int b) {
   if (a > 0) {
     digitalWrite(lmf, 1);
@@ -38,6 +38,26 @@ void motor (int a, int b) {
   analogWrite(lms, a);
   analogWrite(rms, b);
 }
+
+void reading() {
+  sensor = 0;
+  for (byte i=0; i<6; i++) {
+    s[i] = analogRead[i];
+    (s[i] > threshold) ? s[i]=1 : s[i]=0; //this line converts analog value into digital
+    sensor += s[i] base[i];
+  }
+}
+void PID_reading() {
+sensor = 0;
+sum = 0;
+for (byte i=0; i < 6; i++) {
+s[i] = analogRead[i];
+(s[i] > threshold) ? s[i] = 1: s[i] = 0; //this line converts analog value into digital
+sensor += s[i] position[i];
+sum += s[i];
+}
+}
+// Void Loop --------------------------------------------
 void loop() {
   reading();
   if (sensor == 0b001100) motor (250, 250);
