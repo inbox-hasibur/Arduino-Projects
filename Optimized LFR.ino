@@ -1,4 +1,4 @@
-#define Ims 5 
+#define lms 5 
 #define lmf 6
 #define lmb 7
 #define rmf 8
@@ -7,7 +7,7 @@
 
 int s[6], sum, avg;
 int base [6] = { 1, 2, 4, 8, 16, 32 };
-int position[6] = { 1,2,3,4,5,6 };
+int position[6] = { 1, 2, 3, 4, 5, 6 };
 int threshold = 512;
 int sensor;
 
