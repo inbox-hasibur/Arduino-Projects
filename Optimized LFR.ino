@@ -27,7 +27,7 @@ pinMode(rmb, OUTPUT);
 // motor(250, 250); //run all the motor forward at full speed
 }
 // Functions ----------------------------------------+
-// Motor Functions -----------------------------
+// Motor Functions ---------------
 void motor (int a, int b) {
   if (a > 0) {
     digitalWrite(lmf, 1);
@@ -53,7 +53,7 @@ void motor (int a, int b) {
   analogWrite(rms, b);
 }
 // Sensor -----------------------------------------+ (abort)
-// Reading ----------------------------------------------
+// Reading --------------------
 void reading() {
   sensor = 0;
   sum = 0;
@@ -63,7 +63,7 @@ void reading() {
     sensor += s[i] base[i];
   }
 }
-// PID Reading --------------------------------------
+// PID Reading -------------------
 void PID_reading() {
 sensor = 0;
 sum = 0;
